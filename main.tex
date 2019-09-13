@@ -1,0 +1,38 @@
+% ============================================================
+% Ejemplo basado en el proyecto http://songs.sourceforge.net/
+% Documentation at: http://songs.sourceforge.net/songsdoc/songs.html
+% ============================================================
+\documentclass{article}
+
+
+% ======================= BEGIN IMPORTS =========================
+% Library needed for using songs
+\usepackage[chorded]{songs}
+
+% Library needed for tuning margins
+\usepackage{geometry}
+% ======================= END IMPORTS =========================
+
+
+% ======================= BEGIN =========================
+% ======================== END ==========================
+
+
+% ======================= BEGIN STYLING =========================
+\geometry{tmargin=.75in, bmargin=.75in, lmargin=.75in, rmargin = .75in}
+
+% Line for ignoring verse enumeration
+\noversenumbers
+% ======================== END STYLING ==========================
+
+\begin{document}
+
+\songsection{Cancionero de Ignacio}
+    \begin{songs}{}
+
+        \input{src/viajero_tu_rumba/main.tex}
+
+        \input{./src/example_song.tex}
+
+    \end{songs}
+\end{document}
