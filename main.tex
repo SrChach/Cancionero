@@ -9,21 +9,38 @@
 % Library needed for using songs
 \usepackage[chorded]{songs}
 
-% Library needed for tuning margins
+% library for tuning margins
 \usepackage{geometry}
+
+% Package to support latin characters
+\usepackage[utf8]{inputenc}
+
+% Package for colors and styling
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
 % ======================= END IMPORTS =========================
+
+
+% ======================= BEGIN STYLING =========================
+% Line for ignoring verse enumeration
+\noversenumbers
+
+% Changing margins
+\geometry{top=.75in,bottom=.75in,left=.75in,right=.75in}
+
+% Specifying two columns for all songs
+\songcolumns{2}
+
+% Re-writing colors
+\renewcommand\printchord[1]{{\small\sffamily\it\color{black!60!white}#1}}
+\renewcommand{\lyricfont}{\sffamily\large}
+\renewcommand{\notebgcolor}{black!13!white}
+\renewcommand{\snumbgcolor}{black!20!white}
+% ======================== END STYLING ==========================
 
 
 % ======================= BEGIN =========================
 % ======================== END ==========================
 
-
-% ======================= BEGIN STYLING =========================
-\geometry{tmargin=.75in, bmargin=.75in, lmargin=.75in, rmargin = .75in}
-
-% Line for ignoring verse enumeration
-\noversenumbers
-% ======================== END STYLING ==========================
 
 \begin{document}
 
