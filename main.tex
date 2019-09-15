@@ -1,6 +1,7 @@
 % ============================================================
 % Ejemplo basado en el proyecto http://songs.sourceforge.net/
 % Documentation at: http://songs.sourceforge.net/songsdoc/songs.html
+% Actual tablature from: https://tex.stackexchange.com/a/49156 
 % ============================================================
 \documentclass{article}
 
@@ -17,6 +18,8 @@
 
 % Package for colors and styling
 \usepackage[dvipsnames,table,xcdraw]{xcolor}
+
+\usepackage{guitartabs}
 % ======================= END IMPORTS =========================
 
 
@@ -44,7 +47,7 @@
 
 \begin{document}
 
-\songsection{Cancionero de Ignacio}
+    \songsection{Cancionero de Ignacio}
     \begin{songs}{}
 
         \input{src/viajero_tu_rumba/main.tex}
@@ -52,4 +55,6 @@
         \input{./src/example_song.tex}
 
     \end{songs}
+    
+    \input{src/example_tab.tex}
 \end{document}
