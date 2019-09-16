@@ -1,49 +1,21 @@
-% ============================================================
+% ====================
 % Ejemplo basado en el proyecto http://songs.sourceforge.net/
 % Documentation at: http://songs.sourceforge.net/songsdoc/songs.html
 % Actual tablature from: https://tex.stackexchange.com/a/49156 
-% ============================================================
+% ====================
 \documentclass{article}
 
+    % Notas: Falta pasar la cancion
+    % Faltan los bajeos (con LilyPond)
+    % Faltan las notas musicales / Acordes
+    % Faltan añadir los versos de las libretas
+    % Falta poner un indice con esta guia https://tex.stackexchange.com/a/192160
 
-% ======================= BEGIN IMPORTS =========================
-% Library needed for using songs
-\usepackage[chorded]{songs}
+% ALL imports and configuration styles must be into config/main
+\usepackage{config/main}
 
-% library for tuning margins
-\usepackage{geometry}
-
-% Package to support latin characters
-\usepackage[utf8]{inputenc}
-
-% Package for colors and styling
-\usepackage[dvipsnames,table,xcdraw]{xcolor}
-
-\usepackage{guitartabs}
-% ======================= END IMPORTS =========================
-
-
-% ======================= BEGIN STYLING =========================
-% Line for ignoring verse enumeration
-\noversenumbers
-
-% Changing margins
-\geometry{top=.75in,bottom=.75in,left=.75in,right=.75in}
-
-% Specifying two columns for all songs
-\songcolumns{2}
-
-% Re-writing colors
-\renewcommand\printchord[1]{{\small\sffamily\it\color{black!60!white}#1}}
-\renewcommand{\lyricfont}{\sffamily\large}
-\renewcommand{\notebgcolor}{black!13!white}
-\renewcommand{\snumbgcolor}{black!20!white}
-% ======================== END STYLING ==========================
-
-
-% ======================= BEGIN =========================
-% ======================== END ==========================
-
+% For a chord to cover several words(I still doubt whether to put this change globally or by song)
+\MultiwordChords
 
 \begin{document}
 
@@ -52,9 +24,9 @@
 
         \input{src/viajero_tu_rumba/main.tex}
 
-        \input{./src/example_song.tex}
+        \input{examples/example_song.tex}
 
     \end{songs}
     
-    \input{src/example_tab.tex}
+    \input{examples/example_tab.tex}
 \end{document}
